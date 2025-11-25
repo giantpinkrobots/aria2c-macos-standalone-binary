@@ -94,26 +94,26 @@ export LDFLAGS
 LTO_FLAGS = -flto -ffunction-sections -fdata-sections
 
 # Dependency versions
-zlib_version = 1.2.11
-zlib_hash = c3e5e9fdd5004dcb542feda5ee4f0ff0744628baf8ed2dd5d66f8ca1197cb1a1
+zlib_version = 1.3.1
+zlib_hash = 9a93b2b7dfdac77ceba5a558a580e74667dd6fede4585b91eefb60f03b72df23
 zlib_url = http://zlib.net/fossils/zlib-$(zlib_version).tar.gz
 
-expat_version = 2.2.8
-expat_hash = bd507cba42716ca9afe46dd3687fb0d46c09347517beb9770f53a435d2c67ea0
-expat_url = https://github.com/libexpat/libexpat/releases/download/R_2_2_8/expat-2.2.8.tar.gz
+expat_version = 2.7.3
+expat_hash = 821ac9710d2c073eaf13e1b1895a9c9aa66c1157a99635c639fbff65cdbdd732
+expat_url = https://github.com/libexpat/libexpat/releases/download/R_2_7_3/expat-2.7.3.tar.gz
 expat_cflags=$(CFLAGS) $(LTO_FLAGS)
 expat_ldflags=$(CFLAGS) $(LTO_FLAGS)
 
-cares_version = 1.15.0
-cares_hash = 6cdb97871f2930530c97deb7cf5c8fa4be5a0b02c7cea6e7c7667672a39d6852
+cares_version = 1.34.5
+cares_hash = 7d935790e9af081c25c495fd13c2cfcda4792983418e96358ef6e7320ee06346
 cares_url = https://github.com/c-ares/c-ares/releases/download/cares-1_15_0/c-ares-$(cares_version).tar.gz
 cares_confflags = "--enable-optimize=$(OPTFLAGS)"
 cares_cflags=$(CFLAGS) $(LTO_FLAGS)
 cares_ldflags=$(CFLAGS) $(LTO_FLAGS)
 
-sqlite_version = autoconf-3300000
-sqlite_hash = e0a8cf4c7a87455e55e10413d16f358ca121ccec687fe1301eac95e2d340fc58
-sqlite_url = https://sqlite.org/2019/sqlite-$(sqlite_version).tar.gz
+sqlite_version = autoconf-3510000
+sqlite_hash = 42e26dfdd96aa2e6b1b1be5c88b0887f9959093f650d693cb02eb9c36d146ca5
+sqlite_url = https://sqlite.org/2025/sqlite-$(sqlite_version).tar.gz
 sqlite_cflags=$(CFLAGS) $(LTO_FLAGS)
 sqlite_ldflags=$(CFLAGS) $(LTO_FLAGS)
 
@@ -124,22 +124,22 @@ gmp_confflags = --disable-cxx --enable-assembly --with-pic --enable-fat
 gmp_cflags=$(CFLAGS)
 gmp_cxxflags=$(CXXFLAGS)
 
-libgpgerror_version = 1.36
-libgpgerror_hash = babd98437208c163175c29453f8681094bcaf92968a15cafb1a276076b33c97c
+libgpgerror_version = 1.56
+libgpgerror_hash = 82c3d2deb4ad96ad3925d6f9f124fe7205716055ab50e291116ef27975d169c0
 libgpgerror_url = https://gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-$(libgpgerror_version).tar.bz2
 libgpgerror_cflags=$(CFLAGS) $(LTO_FLAGS)
 libgpgerror_ldflags=$(CFLAGS) $(LTO_FLAGS)
 libgpgerror_confflags = --with-pic --disable-languages --disable-doc --disable-nls
 
-libgcrypt_version = 1.8.5
-libgcrypt_hash = 3b4a2a94cb637eff5bdebbcaf46f4d95c4f25206f459809339cdada0eb577ac3
+libgcrypt_version = 1.11.2
+libgcrypt_hash = 6ba59dd192270e8c1d22ddb41a07d95dcdbc1f0fb02d03c4b54b235814330aac
 libgcrypt_url = https://gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-$(libgcrypt_version).tar.bz2
 libgcrypt_confflags=--with-gpg-error-prefix=$(PWD)/arch --disable-O-flag-munging --disable-asm --disable-amd64-as-feature-detection
 libgcrypt_cflags=$(PLATFORMFLAGS)
 libgcrypt_cxxflags=$(PLATFORMFLAGS)
 
-libssh2_version = 1.9.0
-libssh2_hash = d5fb8bd563305fd1074dda90bd053fb2d29fc4bce048d182f96eaa466dfadafd
+libssh2_version = 1.11.1
+libssh2_hash = d9ec76cbe34db98eec3539fe2c899d26b0c837cb3eb466a56b0f109cabf658f7
 libssh2_url = https://www.libssh2.org/download/libssh2-$(libssh2_version).tar.gz
 libssh2_cflags=$(CFLAGS) $(LTO_FLAGS)
 libssh2_cxxflags=$(CXXFLAGS) $(LTO_FLAGS)
