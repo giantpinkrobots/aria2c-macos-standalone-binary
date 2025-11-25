@@ -106,7 +106,7 @@ expat_ldflags=$(CFLAGS) $(LTO_FLAGS)
 
 cares_version = 1.15.0
 cares_hash = 6cdb97871f2930530c97deb7cf5c8fa4be5a0b02c7cea6e7c7667672a39d6852
-cares_url = https://c-ares.haxx.se/download/c-ares-$(cares_version).tar.gz
+cares_url = https://github.com/c-ares/c-ares/releases/download/cares-1_15_0/c-ares-$(cares_version).tar.gz
 cares_confflags = "--enable-optimize=$(OPTFLAGS)"
 cares_cflags=$(CFLAGS) $(LTO_FLAGS)
 cares_ldflags=$(CFLAGS) $(LTO_FLAGS)
